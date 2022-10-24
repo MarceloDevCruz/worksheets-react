@@ -1,0 +1,44 @@
+a {
+  color: white;
+}
+
+.btnNew {
+  background-color: #3fa72f;
+  height: 3.5rem;
+  width: 16rem;
+  color: white;
+  border: 0.1rem solid #090302;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 400ms;
+  text-align: center;
+  font-weight: bold;
+  margin: 2rem;
+}
+
+.btnNew:hover {
+  background-color: rgb(1, 59, 5);
+}
+
+.Worksheet {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #090302;
+  width: 80rem;
+  min-height: 40rem;
+  margin: 6rem auto;
+}
+
+.Worksheet p {
+  text-align: center;
+  padding: 1rem;
+}
+
+.Worksheet h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 2rem;
+}

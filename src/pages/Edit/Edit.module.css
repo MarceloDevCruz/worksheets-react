@@ -1,0 +1,50 @@
+.edit {
+  font-size: 1.5rem;
+  color: #090302;
+  width: 80rem;
+  min-height: 40rem;
+  margin: 6rem auto;
+}
+
+.edit p {
+  text-align: center;
+  padding: 1rem;
+}
+
+.edit h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 2rem;
+}
+
+.edit form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.edit span {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.editbtn {
+  background-color: #3fa72f;
+  height: 3.5rem;
+  width: 16rem;
+  color: white;
+  border: 0.1rem solid #090302;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 400ms;
+  text-align: center;
+  font-weight: bold;
+}
+
+.editbtn:hover {
+  background-color: rgb(1, 59, 5);
+}

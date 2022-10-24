@@ -1,0 +1,27 @@
+.login {
+  font-size: 2rem;
+  color: #090302;
+  width: 80rem;
+  min-height: 40rem;
+  margin: 6rem auto;
+}
+
+.login p {
+  text-align: center;
+  padding: 1rem;
+}
+
+.login h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
