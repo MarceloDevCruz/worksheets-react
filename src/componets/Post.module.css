@@ -67,3 +67,60 @@
   justify-content: space-between;
   width: 10rem;
 }
+
+@media (max-width: 768px) and (min-width: 426px) {
+
+  .delete,
+  .edit {
+    font-size: 1.3rem;
+    height: 3.2rem;
+    width: 3.2rem;
+  }
+
+  .events {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 425px) and (min-width: 376px) {
+
+  .delete,
+  .edit {
+    font-size: 1.1rem;
+    height: 2.9rem;
+    width: 2.9rem;
+  }
+
+  .events {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 375px) and (min-width: 320px) {
+
+  .delete,
+  .edit {
+    font-size: 1rem;
+    height: 2.7rem;
+    width: 2.7rem;
+  }
+
+  .events {
+    justify-content: space-around;
+  }
+
+}
+
+@media (max-width: 319px) {
+
+  .delete,
+  .edit {
+    font-size: 0.8rem;
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+
+  .events {
+    justify-content: space-around;
+  }
+}

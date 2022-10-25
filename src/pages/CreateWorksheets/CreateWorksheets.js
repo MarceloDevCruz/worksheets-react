@@ -46,7 +46,7 @@ const CreateWorksheets = () => {
           <input type="text"
             name="text"
             required
-            placeholder='Escolha um título para seu orçamento'
+            placeholder='Escolha um título para seu Worksheet'
             onChange={(e) => setTitle(e.target.value)}
             value={title}
           />

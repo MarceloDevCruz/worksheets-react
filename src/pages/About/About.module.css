@@ -1,6 +1,6 @@
 .about p {
   margin: 4rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   text-align: left;
 }
 
@@ -8,9 +8,111 @@
   margin: 2rem;
   font-size: 2.2rem;
   text-align: center;
+  font-weight: 400;
 }
 
 .about {
-  width: 60%;
+  min-height: 70vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
+}
+
+
+
+@media (max-width: 1024px) and (min-width: 769px) {
+
+  .about p {
+    font-size: 1.8rem;
+  }
+
+  .about {
+    width: 60%;
+  }
+
+  .about h1 {
+    margin: 1.5rem;
+    font-size: 2.1rem;
+  }
+}
+
+/* Surface Pro 7*/
+@media (max-width: 912px) {
+  .about p {
+    font-size: 2rem;
+  }
+
+  .about {
+    width: 60%;
+  }
+
+  .about h1 {
+    margin: 1.5rem;
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 426px) {
+
+  .about p {
+    font-size: 1.6rem;
+  }
+
+  .about {
+    width: 70%;
+  }
+
+  .about h1 {
+    margin: 1.5rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 425px) and (min-width: 376px) {
+
+  .about p {
+    font-size: 1.3rem;
+  }
+
+  .about {
+    width: 85%;
+  }
+
+  .about h1 {
+    margin: 1.2rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 375px) and (min-width: 320px) {
+
+  .about p {
+    font-size: 1.2rem;
+  }
+
+  .about {
+    width: 93%;
+  }
+
+  .about h1 {
+    margin: 1rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 319px) {
+  .about p {
+    font-size: 1.1rem;
+  }
+
+  .about {
+    width: 97%;
+  }
+
+  .about h1 {
+    margin: 1rem;
+    font-size: 1.5rem;
+  }
 }
