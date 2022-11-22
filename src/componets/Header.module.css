@@ -8,8 +8,11 @@
 }
 
 .logo {
+  display: flex;
+  justify-content: center;
   font-size: 3rem;
   text-decoration: none;
+  text-align: center;
   color: #8A7E72;
 }
 
@@ -32,11 +35,38 @@
   font-weight: 500;
 }
 
+.mobileMenu {
+  display: none;
+  font-size: 3rem;
+  color: #5A2328;
+
+}
+
 .active {
   text-decoration: underline;
 }
 
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 880px) and (min-width: 767px) {
+
+  .nav ul li {
+    margin: 0 1.7rem;
+  }
+}
+
+
 @media (max-width: 768px) and (min-width: 426px) {
+
+  .mobileMenu {
+    display: block;
+  }
 
   .nav {
     flex-direction: column;
@@ -53,6 +83,10 @@
 
 @media (max-width: 425px) and (min-width: 376px) {
 
+  .mobileMenu {
+    display: block;
+  }
+
   .nav {
     flex-direction: column;
   }
@@ -68,6 +102,10 @@
 
 @media (max-width: 375px) and (min-width: 320px) {
 
+  .mobileMenu {
+    display: block;
+  }
+
   .nav {
     flex-direction: column;
   }
@@ -82,6 +120,10 @@
 }
 
 @media (max-width: 319px) {
+
+  .mobileMenu {
+    display: block;
+  }
 
   .nav {
     flex-direction: column;

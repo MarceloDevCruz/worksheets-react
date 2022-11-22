@@ -1,88 +1,45 @@
 // router
 import { NavLink } from 'react-router-dom'
 
+// components
+import NavBar from './NavBar'
+
 //hook
-import { Authentication } from '../hooks/Authentication'
-import { AuthenticationContextValue } from '../context/AuthenticationContext'
+import { FaAlignJustify, FaWindowClose } from 'react-icons/fa'
+import { useState, useEffect } from 'react'
 
 //css
 import styles from './Header.module.css'
 
 const Header = () => {
 
-  const { user } = AuthenticationContextValue()
-  const { logout } = Authentication()
+  const [open, setOpen] = useState(false)
+  const [width, setWidth] = useState(window.innerWidth)
 
+  const mobileMenuShow = () => {
+    setOpen(!open)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', function () {
+      setWidth(window.innerWidth)
+      if (width > 768) return setOpen(false)
+    })
+  }, [width])
 
   return (
     <nav className={styles.nav}>
-      <NavLink to="/">
-        <span className={styles.logo} >uDo<span className={styles.logoStyle}>ckers</span></span>
-      </NavLink>
 
-      <ul>
-        <li>
-          <NavLink to="/">
-            Home
-          </NavLink>
-        </li>
+      <div className={styles.header}>
+        <NavLink to="/">
+          <span className={styles.logo} >uDo<span className={styles.logoStyle}>ckers</span></span>
+        </NavLink>
 
-        {user && (
-          <>
-            <li>
-              <NavLink to="/worksheets"
-                className={({ isActive }) => (isActive ? styles.active : "")}
-              >
-                Meus Worksheets
-              </NavLink>
-            </li>
+        {!open ? (<FaWindowClose className={styles.mobileMenu} onClick={mobileMenuShow} />)
+          : (<FaAlignJustify className={styles.mobileMenu} onClick={mobileMenuShow} />)}
+      </div>
 
-            <li>
-              <NavLink to="/createNew"
-                className={({ isActive }) => (isActive ? styles.active : "")}
-              >
-                Novo Worksheet
-              </NavLink>
-            </li>
-          </>
-        )}
-
-
-        {!user && (
-          <>
-            <li>
-              <NavLink to="/login"
-                className={({ isActive }) => (isActive ? styles.active : "")}
-              >
-                Entrar
-              </NavLink>
-            </li>
-
-            <li>
-              <NavLink to="/register"
-                className={({ isActive }) => (isActive ? styles.active : "")}
-              >
-                Cadastrar
-              </NavLink>
-            </li>
-          </>
-        )}
-
-        <li>
-          <NavLink to="/about"
-            className={({ isActive }) => (isActive ? styles.active : "")}
-          >
-            Sobre
-          </NavLink>
-        </li>
-
-        {user && (
-          <li>
-            <button className="logout" onClick={logout}>Sair</button>
-          </li>
-        )}
-
-      </ul>
+      {!open && <NavBar />}
 
     </nav >
   )
