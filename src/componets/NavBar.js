@@ -1,7 +1,7 @@
 // router
 import { NavLink } from 'react-router-dom'
 
-//hooks
+//hook
 import { Authentication } from '../hooks/Authentication'
 import { AuthenticationContextValue } from '../context/AuthenticationContext'
 

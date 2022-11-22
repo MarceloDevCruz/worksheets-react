@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 // components
 import NavBar from './NavBar'
 
-//hooks
+//hook
 import { FaAlignJustify, FaWindowClose } from 'react-icons/fa'
 import { useState, useEffect } from 'react'
 
